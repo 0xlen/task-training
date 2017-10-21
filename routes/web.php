@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::post('/new', 'TaskController@newTask');
+Route::get('/task', 'TaskController@show');
+Route::get('/task/{id}', 'TaskController@getTask');
+Route::delete('/task/{id}', 'TaskController@deleteTask');
